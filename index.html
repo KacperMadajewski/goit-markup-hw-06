@@ -477,6 +477,7 @@
               class="input-ftr"
               type="email"
               id="email"
+              name="email"
               placeholder="   E-mail"
             />
             <button class="submit-ftr" type="submit">
@@ -489,7 +490,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
           <img
@@ -499,6 +500,23 @@
             height="11px"
           />
         </button>
+        <form>
+          <fieldset class="fieldset">
+            <label class="label-top"
+              >Zostaw swoje dane w formularzu ponizej</label
+            >
+            <fieldset class="fieldset-1">
+              <label for="name" class="label">Imię</label>
+              <input class="input" type="text" name="name" id="name" />
+              <label for="tel" class="label">Telefon</label>
+              <input class="input" type="tel" name="tel" id="tel" />
+              <label for="email" class="label">Email</label>
+              <input class="input" type="email" name="email" id="email" />
+              <label for="textarea" class="label">Komentarz</label>
+              <input class="input" type="text" name="text-area" id="textarea" />
+            </fieldset>
+          </fieldset>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

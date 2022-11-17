@@ -676,3 +676,50 @@ body {
   height: 24px;
   margin-left: 24px;
 }
+
+.fieldset {
+  margin-top: 38px;
+  border: transparent;
+  width: 448px;
+  padding: 0;
+}
+
+.fieldset-1 {
+  border: transparent;
+  margin-left: 0px;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.label-top {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  width: 448px;
+  height: 23px;
+  margin-left: 40px;
+  padding-left: 20px;
+}
+
+.input {
+  width: 448px;
+  height: 40px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--links-text-color);
+}

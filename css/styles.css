@@ -716,10 +716,24 @@ body {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 14px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+  outline: none;
+  width: 370px;
+}
+
+.fieldset:has(input:focus) {
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: var(--hoover-color);
+}
+
+.fieldset:has(input:focus) .icon-form {
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--hoover-color);
 }
 
 .my-form .label {
@@ -755,6 +769,36 @@ body {
   margin-left: 55px;
   display: flex;
   cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+
+.checkbox-label input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox-label .checkmark {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background: var(--white-item-color);
+  border: 0.2px solid #212121;
+  border-radius: 2px;
+}
+
+.checkmark::after {
+  margin-top: -1px;
+  margin-left: -1px;
+  content: url(../images/sprite-svg/random-icons/icon-checked.svg);
+  fill: var(--hoover-color);
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark::after {
+  display: block;
 }
 
 .checkbox-text {
@@ -764,11 +808,12 @@ body {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--links-text-color);
+  margin-left: 23px;
 }
 
 .checkbox-text-link {
-  color: #2196f3;
+  color: var(--hoover-color);
 }
 
 .modal-btn-send {
@@ -780,12 +825,12 @@ body {
   border: 0;
   margin-left: 164px;
   margin-top: 30px;
-
+  cursor: pointer;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--white-item-color);
 }
